@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #548687;
+    text-align: center;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    font-weight: bolder;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3vh;
+    margin-top: 6vh;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1.5vh;
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-size: 5rem;
+    background-color: white;
+    font-weight: bold;
+}
+
+.reset-btn {
+    margin-top: 6vh;
+    background-color: black;
+    color: white;
+    border-radius: 2vh;
+    border: none;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+.msg-viewer {
+    margin-top: 5vmin;
+    font-size: 6vmin;
+    color:black;
+    font-weight:bold;
+}
+
