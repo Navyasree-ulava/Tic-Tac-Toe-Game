@@ -1,5 +1,4 @@
 let boxes = document.querySelectorAll('.box');
-let resetBtn = document.querySelector('.reset-btn');
 let msg = document.querySelector('.msg');
 let reset = document.querySelector('.reset-btn');
 let count = 0;
@@ -40,10 +39,6 @@ boxes.forEach((box) => {
         // we can do this by using a checkWinner Function
 
         checkWinner();
-        if(count===9)
-        {
-            isTie();
-        }
     })
 });
 
@@ -75,8 +70,6 @@ const isTie = () => {
 
 const checkWinner = () => {
 
-    let isWin = false;
-
     for(pattern of winPatterns){
         //console.log(pattern);
         //console.log(pattern[0], pattern[1], pattern[2]);
@@ -91,12 +84,17 @@ const checkWinner = () => {
                 console.log(pos1+" has WON");
                 showWinner(pos1);
                 isWin = true;
+                return;
             }
         }
     }
+    if(count===9 && isWin==false)
+    {
+        isTie();
+    }
 };
 
-const resetGame = () => () => {
+const resetGame = () => {
 
     turnO = true;
     count = 0;
@@ -109,7 +107,7 @@ const resetGame = () => () => {
     msg.innerText = "";
 };
 
-reset.addEventListener('click', resetGame());
+reset.addEventListener('click', resetGame);
 
 
 
